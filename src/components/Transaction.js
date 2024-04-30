@@ -29,13 +29,14 @@ const Transaction = ({ id, date, description, category, amount, onDelete }) => {
 };
 
 // PropTypes for type-checking props
+// I'll need to make more notes on this since its supposed to be best practice to always include them
 Transaction.propTypes = {
-  id: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
-  amount: PropTypes.number.isRequired,
-  onDelete: PropTypes.func.isRequired,
+  id: PropTypes.string,
+  date: PropTypes.string,
+  description: PropTypes.string,
+  category: PropTypes.string,
+  amount: PropTypes.number,
+  onDelete: PropTypes.func,
 };
 
 export default Transaction;

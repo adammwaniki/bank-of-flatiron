@@ -56,7 +56,7 @@ function TransactionsList({ transactions, searchTerm }) {
               date={transaction.date}
               description={transaction.description}
               category={transaction.category}
-              amount={transaction.amount}
+              amount={Number(transaction.amount)} //converting the string into a number
               onDelete={handleDelete}
             />
           ))}
