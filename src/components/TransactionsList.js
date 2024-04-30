@@ -36,6 +36,8 @@ function TransactionsList({ transactions, searchTerm }) {
       const updatedTransactions = transactions.filter(
         (transaction) => transaction.id !== id
       );
+      // Updating the transactions list to remove the bug where it doesn't update the UI immediately after clicking the delete button
+      setSortedTransactions(updatedTransactions);
       setFilteredTransactions(updatedTransactions);
     } catch (error) {
       console.error("Error deleting transaction:", error);
